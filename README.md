@@ -1,17 +1,17 @@
-# Data Structures & Algorithms — Built From Scratch
+# Data Structures & Algorithms Library
 
-> A learning-first C++20 collection of data structures and algorithms. Every
-> file explains **how the structure or algorithm is built**, not just how to call
-> a library.
+> Built from scratch: a learning-first C++20 library of data structures and
+> algorithms. Every file explains **how the structure or algorithm is built**,
+> not just how to call a library.
 
-[![build-and-test](https://github.com/AmrEldhshan/Data-Structures-Algorithms/actions/workflows/build.yml/badge.svg)](https://github.com/AmrEldhshan/Data-Structures-Algorithms/actions/workflows/build.yml)
+[![build-and-test](https://github.com/Amr-Khaled-Ahmed/data-structures-and-algorithms-library/actions/workflows/build.yml/badge.svg)](https://github.com/Amr-Khaled-Ahmed/data-structures-and-algorithms-library/actions/workflows/build.yml)
 ![C++20](https://img.shields.io/badge/C%2B%2B-20-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This is a study repository, not a production library. The implementations are
-written to be read: clear names, small helpers, complexity notes, and comments
-that explain the *why*. Many programs also print a trace so you can watch the
-algorithm work.
+This is a learning-first library, not a production-grade one. The implementations
+are written to be read: clear names, small helpers, complexity notes, and
+comments that explain the *why*. Many programs also print a trace so you can
+watch the algorithm work.
 
 ---
 
@@ -51,8 +51,8 @@ Requirements: a C++20 compiler (GCC 11+, Clang 14+, or MSVC 2022) and CMake
 3.16+.
 
 ```bash
-git clone https://github.com/AmrEldhshan/Data-Structures-Algorithms.git
-cd Data-Structures-Algorithms
+git clone https://github.com/Amr-Khaled-Ahmed/data-structures-and-algorithms-library.git
+cd data-structures-and-algorithms-library
 
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --parallel
@@ -136,7 +136,7 @@ hashing, graphs, DP, and NP-complete problems — are in
 ## Repository layout
 
 ```text
-Data-Structures-Algorithms/
+data-structures-and-algorithms-library/
 ├── src/
 │   ├── data_structures/
 │   │   ├── linked_lists/          # 6 list variants
