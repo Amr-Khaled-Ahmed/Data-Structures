@@ -101,6 +101,7 @@ troubleshooting.
 | [Dynamic programming](src/algorithms/dynamic_programming/README.md) | 15 | Fibonacci, knapsack, LIS, LCS, edit distance, coin change, matrix chain, rod cutting, LPS, unbounded knapsack, partition, bitmask TSP, tree DP, digit DP, interval DP |
 | [Graphs](src/algorithms/graph/README.md) | 18 | BFS, DFS, topological sort, SCC, shortest paths (Dijkstra, Bellman-Ford, Floyd-Warshall, SPFA, DAG, A*, Johnson), MSTs, bridges, LCA |
 | [Strings](src/algorithms/strings/README.md) | 8 | KMP, Z-algorithm, Rabin-Karp, Manacher, Aho-Corasick, Boyer-Moore, Kasai LCP, two-string LCP |
+| [Compression](src/algorithms/compression/README.md) | 15 | RLE, Huffman (static/adaptive/modified), LZ77/LZ78/LZW, arithmetic coding, scalar/vector quantization, DPCM, DCT, baseline JPEG (encoder + decoder), motion estimation, MPEG-style I/P codec |
 | [Backtracking](src/algorithms/backtracking/README.md) | 5 | N-Queens, Sudoku, permutations/combinations/subsets, rat in a maze, palindrome partitioning |
 | [Greedy](src/algorithms/greedy/README.md) | 5 | Activity selection, fractional knapsack, Huffman, merge intervals, jump game |
 | [Number theory](src/algorithms/number_theory/README.md) | 6 | GCD, modular arithmetic, totient, factorisation, CRT, Pollard rho, matrix power, Gaussian elimination, NTT |
@@ -165,6 +166,7 @@ data-structures-and-algorithms-library/
 │   │   ├── dynamic_programming/  # 15 DP examples
 │   │   ├── graph/                 # traversal, SCC, shortest paths, MSTs, LCA, A*
 │   │   ├── strings/               # KMP, Z, Rabin-Karp, Manacher, Aho-Corasick, Boyer-Moore
+│   │   ├── compression/           # entropy/dictionary coding, JPEG, motion estimation
 │   │   ├── backtracking/          # N-Queens, Sudoku, permutations, mazes
 │   │   ├── greedy/                # activity selection, knapsack, Huffman, intervals
 │   │   ├── number_theory/         # GCD, modular arithmetic, CRT, factorisation, linear algebra

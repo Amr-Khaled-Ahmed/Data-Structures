@@ -266,3 +266,23 @@ case. They are here to show *how* the search works, not to solve large inputs.
 | Travelling salesman | O(V!) | Enumerate tours / permutations |
 
 \* O(m log n) assumes the pattern search is added on top; this repo only builds the array.
+
+## Compression
+
+| Codec | Encode | Decode | Space | Lossless | Notes |
+| --- | --- | --- | --- | --- | --- |
+| RLE | O(n) | O(n) | O(n) | Yes | Great for long runs, can expand other data |
+| Huffman (static) | O(n log k) | O(n) | O(k) | Yes | Canonical table stored in the stream |
+| Adaptive Huffman (FGK) | O(n · k) | O(n · k) | O(k) | Yes | No table transmitted; leader search costs O(k) |
+| Modified Huffman (variant) | O(n log k) | O(n) | O(n) | Yes | Teaching model, not T.4 compatible |
+| LZ77 | O(n · w · m) | O(n) | O(n) | Yes | `w` window, `m` max match; hash chains make it faster |
+| LZ78 | O(n · phrase) | O(n) | O(n) | Yes | Explicit growing dictionary |
+| LZW | O(n) expected | O(n) | O(dictionary) | Yes | 12-bit codes, clear code resets at 4096 entries |
+| Arithmetic coding | O(n · k) | O(n · k) | O(k) | Yes | Near entropy limit; static model here |
+| Scalar quantization | O(n) | O(n) | O(n) | No | Error <= step/2 |
+| Vector quantization | O(n · k · d) | O(n) | O(k · d) | No | k-means training, `d` dimensions |
+| DPCM | O(n) | O(n) | O(n) | Yes (base) | Quantized variant is lossy |
+| DCT (direct) | O(N³) for an N×N block | O(N³) | O(N²) | Yes (inverse) | Fast DCT is O(N² log N) for 2D |
+| JPEG baseline | O(pixels · block work) | O(pixels · block work) | O(pixels) | No | Grayscale; standard tables |
+| Motion estimation (full search) | O(pixels · (2r+1)²) | O(pixels) | O(pixels) | No | `r` search radius |
+| MPEG-style I/P | dominated by motion search | O(pixels) | O(pixels) | No | Teaching model, not MPEG-conformant |

@@ -206,7 +206,42 @@ Legend: `[x]` implemented, `[ ]` planned.
 - [ ] Berlekamp-Massey
 - [ ] Computational geometry primitives
 
-## Phase 4 — Polish
+## Phase 4 — Data compression
+
+### Lossless
+
+- [x] Run-Length Encoding (RLE)
+- [x] Huffman coding (canonical, static table)
+- [x] Adaptive Huffman coding (FGK)
+- [x] Modified Huffman (teaching variant)
+- [x] LZ77
+- [x] LZ78
+- [x] LZW
+- [x] Arithmetic coding (32-bit binary intervals)
+- [x] Arithmetic coding (floating-point teaching form)
+
+### Lossy and quantization
+
+- [x] Scalar quantization
+- [x] Vector quantization (k-means codebook)
+- [x] DPCM / predictive coding
+- [x] Quantized DPCM
+
+### Transform, image and video
+
+- [x] DCT-II and inverse DCT (1D and 2D)
+- [x] Baseline grayscale JPEG encoder (standard markers, Annex K tables)
+- [x] Baseline grayscale JPEG decoder
+- [x] Block-matching motion estimation (full search, SAD)
+- [x] Motion-compensated residual coding
+- [x] MPEG-style I/P frame container (teaching model)
+- [ ] Conformant MPEG-1/2 bitstream
+- [ ] Colour JPEG (YCbCr, chroma subsampling)
+- [ ] Progressive JPEG
+- [ ] B-frames and rate-distortion motion search
+- [ ] DEFLATE-compatible stream (LZ77 + Huffman)
+
+## Phase 5 — Polish
 
 - [ ] A test for every header-only structure
 - [ ] A smoke test for every demo

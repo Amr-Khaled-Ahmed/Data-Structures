@@ -164,6 +164,30 @@ Run trial division and Miller-Rabin on `n = 561` (a Carmichael number). What
 does each algorithm say, and why is that a useful lesson about probabilistic
 tests?
 
+## Stage 11 — Data compression and information theory
+
+**Read**
+
+- [`compression/`](../src/algorithms/compression/README.md) — start with the
+  lossless coders, then quantization, then JPEG and motion estimation.
+- [`huffman.h`](../src/algorithms/compression/huffman.h) — compare the encoded
+  size with `byteEntropy()` to see how close the code gets to the limit.
+- [`arithmetic_coding.h`](../src/algorithms/compression/arithmetic_coding.h) —
+  read the floating-point form first; it is the clearest explanation.
+
+**Run**
+
+```bash
+./build/bin/demo_compression
+./build/bin/demo_jpeg
+./build/bin/demo_mpeg
+```
+
+**Exercise**
+
+Compress the same text with Huffman, LZW, and arithmetic coding. Which wins,
+and why? Then lower the JPEG quality from 90 to 40 and watch the PSNR fall.
+
 ## What to do next
 
 Pick one of the ideas in the [roadmap](ROADMAP.md), implement it in the same

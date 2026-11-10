@@ -12,6 +12,7 @@ the idea.
 | [`dynamic_programming/`](dynamic_programming/README.md) | Fibonacci, knapsack, LIS, LCS, edit distance, coin change, matrix chain, rod cutting, LPS, partition, bitmask TSP, tree DP, digit DP, interval DP |
 | [`graph/`](graph/README.md) | BFS, DFS, topological sort, SCC, shortest paths (including SPFA, DAG, A*, Johnson), MSTs, bridges, LCA |
 | [`strings/`](strings/README.md) | KMP, Z-algorithm, Rabin-Karp, Manacher, Aho-Corasick, Boyer-Moore, Kasai LCP, two-string LCP |
+| [`compression/`](compression/README.md) | RLE, Huffman (static, adaptive, modified), LZ77/LZ78/LZW, arithmetic coding, scalar/vector quantization, DPCM, DCT, baseline JPEG, motion estimation, MPEG-style I/P codec |
 | [`backtracking/`](backtracking/README.md) | N-Queens, Sudoku, permutations/combinations/subsets, rat in a maze, palindrome partitioning |
 | [`greedy/`](greedy/README.md) | Activity selection, fractional knapsack, Huffman coding, merge intervals, jump game |
 | [`number_theory/`](number_theory/README.md) | GCD, modular arithmetic, totient, factorisation, CRT, Pollard rho, matrix power, Gaussian elimination, NTT |

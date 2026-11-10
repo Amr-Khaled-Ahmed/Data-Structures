@@ -91,6 +91,9 @@ dsa_add_demo(demo_b_tree "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/b_tree_demo.cpp"
 dsa_add_demo(demo_b_plus_tree "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/b_plus_tree_demo.cpp")
 dsa_add_demo(demo_fibonacci_heap "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/fibonacci_heap_demo.cpp")
 dsa_add_demo(demo_rope "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/rope_demo.cpp")
+dsa_add_demo(demo_compression "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/compression_demo.cpp")
+dsa_add_demo(demo_jpeg "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/jpeg_demo.cpp")
+dsa_add_demo(demo_mpeg "${CMAKE_CURRENT_SOURCE_DIR}/src/demos/mpeg_demo.cpp")
 
 # ---------------------------------------------------------------------------
 # Data structure examples that are complete programs
@@ -208,6 +211,11 @@ if(DSA_BUILD_TESTS)
     dsa_enable_warnings(test_structures)
     add_test(NAME structures COMMAND test_structures)
 
+    add_executable(test_compression "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_compression.cpp")
+    target_link_libraries(test_compression PRIVATE dsa_headers)
+    dsa_enable_warnings(test_compression)
+    add_test(NAME compression COMMAND test_compression)
+
     # Smoke tests for the standalone graph demos: each program must exit 0.
     foreach(demo
             algo_bfs algo_dfs algo_topological_sort algo_cycle_detection
@@ -225,6 +233,7 @@ if(DSA_BUILD_TESTS)
             demo_disjoint_sparse_table algo_mos demo_pairing_heap
             demo_radix_tree demo_suffix_tree demo_van_emde_boas
             demo_b_tree demo_b_plus_tree demo_fibonacci_heap demo_rope
+            demo_compression demo_jpeg demo_mpeg
             algo_unbounded_knapsack algo_partition algo_tsp_bitmask
             algo_tree_dp algo_digit_dp
             algo_aho_corasick algo_boyer_moore algo_lcp_kasai

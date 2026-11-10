@@ -34,6 +34,17 @@ just start), and follow [CONTRIBUTING.md](../CONTRIBUTING.md).
 - [x] Trial division, sieve, Fermat, Miller-Rabin, AKS placeholder
 - [x] Five NP-complete examples
 
+### Data compression
+
+- [x] RLE, LZ77, LZ78, and LZW
+- [x] Static canonical Huffman, adaptive Huffman (FGK), modified Huffman
+- [x] Arithmetic coding (binary and floating-point forms)
+- [x] Scalar and vector quantization, DPCM
+- [x] DCT-II and inverse DCT
+- [x] Baseline grayscale JPEG encoder and decoder
+- [x] Block-matching motion estimation and motion-compensated residuals
+- [x] MPEG-style I/P frame container (teaching model)
+
 ## Good next contributions
 
 The full phased checklist lives in [COVERAGE.md](COVERAGE.md). Start with the
@@ -58,6 +69,17 @@ next unchecked item in **Phase 1**.
 - [ ] A real AKS implementation (the current file is a teaching placeholder)
 - [ ] Deterministic Miller-Rabin bases for 64-bit integers
 
+### Compression
+
+- [ ] A conformant MPEG-1/2 bitstream (sequence, slice, and macroblock layers,
+      VLC tables, B-frames, chroma formats)
+- [ ] Colour JPEG (YCbCr conversion and 4:2:0 chroma subsampling)
+- [ ] A decoder that accepts arbitrary baseline JPEG files, not only the
+      single-component streams produced here
+- [ ] Progressive JPEG
+- [ ] Rate-distortion motion search and sub-pixel motion vectors
+- [ ] A DEFLATE-compatible stream (LZ77 + Huffman) that gzip/zlib can read
+
 ### Teaching improvements
 
 - [ ] A diagram beside every tree rotation
@@ -80,3 +102,11 @@ These are intentional or documented so learners are not surprised:
   provided for MSVC in `src/compat`.
 - The NP-complete examples are small, readable search programs. They are not
   optimised for large inputs.
+- The MPEG-style codec is a **teaching model**, not a conformant MPEG-1/2
+  bitstream. It implements I/P frames, block matching, motion vectors, and
+  residual coding inside a simple container.
+- The modified Huffman implementation is a teaching variant, not bit-compatible
+  with T.4 fax machines.
+- The JPEG implementation handles 8-bit grayscale baseline images only. It
+  writes and reads a valid `.jpg`, but colour and progressive modes are not
+  implemented.
